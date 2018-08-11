@@ -1,13 +1,18 @@
-<h1>Lista de Admin</h1> 
-<table>
-  <tr>
-    <th>User</th>
-    <th>Password</th>
-  </tr>
-  <% @admin.each do |admin| %>
-     <tr>
-       <td> <%= admin.user %></td> 
-       <td> <%= admin.user %></td>
+<div class="table_box">
+<h1 class="table_h1">Lista de Admins</h1>
+<table class="table">
+  <thead class="thead-dark table_header">
+    <tr>
+      <th class="table_header_row" scope="col">User</th>
+      <th class="table_header_row" scope="col">Pass</th>
     </tr>
-  <% end %> 
+  </thead>
+  <tbody>
+      <% @admin.each do |admin| %>
+          <tr>
+              <td> <%= admin.user %></td>
+              <td> <%= admin.user %></td>
+          </tr>
+      <% end %>
+  </tbody>
 </table>
