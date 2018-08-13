@@ -1,29 +1,11 @@
 <div class="body">
 	<div class="table_box">
 		<h1 class="table_h1">Lista de Admins</h1>
-		<table class="table">
-			<thead class="thead-dark table_header">
-				<tr>
-					<th class="table_header_row" scope="col">User</th>
-					<th class="table_header_row" scope="col">Pass</th>
-					<th class="table_header_row" scope="col">Action</th>
-				</tr>
-			</thead>
-			<tbody>
-				<% @admin.each do |admin| %>
-				<tr>
-					<td> <%= admin.user %> </td>
-					<td> <%= admin.password %> </td>
-					<td> 
-						<button type="button" class="btn btn-warning btn btn-primary btn-sm table_button">Update</button> 
-						<button type="button" class="btn btn-danger btn btn-primary btn-sm table_button">Delete</button> 
-					</td> 
-				</tr>
-				<% end %>
-			</tbody>
-		</table>
-		<div class="table_button_add">
-			<button type="button" class="btn btn-success">Create new Admin</button>
-		</div>
+		<!--load the table-->
+		<%= render "show" %>
+		<!--from to create new admin-->
+	</div>
+	<div class="form">
+		<%= render "create" %>
 	</div>
 </div>

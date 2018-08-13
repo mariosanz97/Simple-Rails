@@ -1,4 +1,5 @@
 class AdminController < ApplicationController
+
   def index
     @admin = Admin.all
   end
@@ -17,4 +18,5 @@ class AdminController < ApplicationController
 
   def destroy
   end
+
 end

@@ -11,6 +11,7 @@ $font-size-smll: 1rem;
 $font-size-med: 2rem;
 $font-size-big: 3rem;
 
+//mixin
 @mixin centerer {
 	position: absolute;
 	top: 20%;
@@ -26,13 +27,15 @@ $font-size-big: 3rem;
 	left: $left;
 }
 
+//Media querys
 @media screen and (min-width: 768px) {
 	.table_box {
 		margin: 0;
 		color: black;
 	}
-} 
+}
 
+//Table
 .table_button{
 	text-align: left;
 }
@@ -54,4 +57,43 @@ $font-size-big: 3rem;
 	text-align: center;
 	vertical-align: middle;
 	line-height: 50px;
+}
+
+//form
+.fakeButtonContainer {
+	width: 300px;
+	margin: 0 auto;
+}
+
+.fakeButton {
+	text-align: center;
+	font-weight: 600;
+	padding: 1em;
+	cursor: pointer;
+}
+
+.expander {
+	display: none;
+	padding: 1em;
+}
+
+input[type="text"], input[type="password"], input[type="submit"] {
+	font-size: 1em;
+	padding: .5em;
+	width: 100%;
+	display: block; 
+}
+input[type="text"], input[type="password"] {
+	margin-bottom: 1em;
+}
+input[type="submit"] {
+	border: none;
+	background-color: #000000;
+	color: white;
+	padding: 1em;
+	font-size: .8em;
+	text-transform: uppercase;
+}
+input[type="submit"]:hover {
+	background-color: #212121;
 }
