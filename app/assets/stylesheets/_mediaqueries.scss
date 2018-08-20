@@ -1,0 +1,39 @@
+$mq-mobile-portrait : 320px !default;
+$mq-mobile-landscape : 480px !default;
+$mq-tablet-portrait : 768px !default;
+$mq-tablet-landscape : 1024px !default;
+$mq-desktop : 1382px !default;
+
+
+@mixin mobile-portrait-and-up {
+@media (min-width : $mq-mobile-portrait) {
+  @content;
+  }
+}
+
+@mixin mobile-landscape-and-up {
+@media only screen and (min-width : $mq-mobile-portrait + 1) {
+  @content;
+  }
+}
+
+
+@mixin tablet-portrait-and-up {
+@media only screen and (min-width : $mq-mobile-landscape + 1) {
+  @content;
+  }
+}
+
+// Everything larger than portrait tablet
+@mixin tablet-landscape-and-up {
+@media only screen and (min-width : $mq-tablet-portrait + 1) {
+  @content;
+  }
+}
+
+// Everything larger than a landscape tablet
+@mixin desktop-and-up {
+@media only screen and (min-width : $mq-tablet-landscape + 1) {
+  @content;
+  }
+}

@@ -27,14 +27,6 @@ $font-size-big: 3rem;
 	left: $left;
 }
 
-//Media querys
-@media screen and (min-width: 768px) {
-	.table_box {
-		margin: 0;
-		color: black;
-	}
-}
-
 //Table
 .table_button{
 	text-align: left;
