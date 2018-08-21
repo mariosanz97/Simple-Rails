@@ -15,7 +15,7 @@ development:
   encoding: utf8 
   host: localhost
   username: ENV["DEV_DB_USERNAME"]
-  password: 
+  password: ENV["DEV_DB_PASS"]
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -25,10 +25,11 @@ test:
   database: ENV["TEST_DATABASE_NAME"]
   encoding: utf8 
   username: ENV["TEST_DB_USERNAME"]
-  password: 
+  password: ENV["TEST_DB_PASS"]
 
 production:
   <<: *default
   database: ENV["PROD_DATABASE_NAME"]
   encoding: utf8
   username: ENV["PROD_DB_USERNAME"]
+  password: ENV["PROD_DB_PASS"]
