@@ -9,12 +9,12 @@
 			</tr>
 		</thead>
 		<tbody>
-			<% @admin.each do |admin| %>
+			<% @admin_show.each do |admin| %>
 			<tr>
 				<td> <%= admin.user %> </td>
 				<td> <%= admin.password %> </td>
 				<td> 
-					<button type="button" class="btn btn-warning btn btn-primary btn-sm table_button">Update</button> 
+					<button type="button" class="btn btn-warning btn btn-primary btn-sm table_button"> <%= link_to "Update", edit_admin_path(admin) %></button> 
 					<button type="button" class="btn btn-danger btn btn-primary btn-sm table_button">Delete</button> 
 				</td> 
 			</tr>
