@@ -42,6 +42,17 @@ class AdminController < ApplicationController
   end
 
   def destroy
+    @admin_delete = Admin.find(params[:id])
+    @admin_delete.destroy
+
+    respond_to do |format|
+      if @admin_delete.destroy
+        format.html { redirect_to admin_index_url, notice: 'Admin was successfully deleted.' }
+      else
+        format.html { redirect_to admin_index_url, notice: 'Admin wasnt successfully deleted.'}
+        format.json { render json: @admin_delete.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   private
