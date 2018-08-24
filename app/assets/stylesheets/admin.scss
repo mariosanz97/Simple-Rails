@@ -10,6 +10,9 @@ $open-sans: 'Open Sans', sans-serif;
 $font-size-smll: 1rem;
 $font-size-med: 2rem;
 $font-size-big: 3rem;
+//Selection gallery
+$width-button-gallery: 115px;
+$margin-top-gallery: 1.5em;
 
 //mixin
 @mixin centerer {
@@ -25,6 +28,14 @@ $font-size-big: 3rem;
     right: $right;
     bottom: $bottom;
     left: $left;
+}
+
+//Selection
+.section_gallery{
+    margin-top: $margin-top-gallery;
+    margin-left: auto;
+    margin-right: auto;
+    width: $width-button-gallery;
 }
 
 //Table
