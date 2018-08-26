@@ -3,6 +3,7 @@
 Tasks
 
     * [x] Learn how to use routes.
+    * [ ] Integrate with React js.
     * [x] Make a full CRUD.
     * [ ] Learn to use something about sass.
     * [x] Learn to use databse (sql), migrations, schema..
