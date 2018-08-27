@@ -3,12 +3,14 @@
 Tasks
 
     * [x] Learn how to use routes.
+    * [ ] Integrate with Redis cache.
     * [ ] Integrate with React js.
+    * [ ] Integrate with New Relic.
+    * [ ] Integrate with cloud tools with heroku.
     * [x] Make a full CRUD.
-    * [ ] Learn to use something about sass.
+    * [x] Learn to use something about sass.
     * [x] Learn to use databse (sql), migrations, schema..
     * [x] Learn to use Environment Variables.
-    * [ ] Learn to use cloud tools with heroku.
     * [ ] Learn to do test.
 
 This README would normally document whatever steps are necessary to get the
