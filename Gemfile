@@ -27,6 +27,8 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 #gem config
 gem 'config'
+#gem devise login
+gem 'devise'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
