@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
   root 'admin#index', as: 'admin_index'
-  devise_for :users
+  devise_for :users,
+  :path_names => {
+    :sign_in  => 'login'
+  }
 
   devise_scope :user do
     get "/sign_in" => "devise/sessions#new", as: "login"
@@ -18,4 +21,4 @@ Rails.application.routes.draw do
     patch 'admin/:id', to: 'admin#update'
     #gallery
     get 'gallery/index', to: 'gallery#index', as: 'gallery'
-end
+  end
