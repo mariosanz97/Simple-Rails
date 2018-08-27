@@ -15,3 +15,36 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ //Devise login form
+ //mixin
+ @mixin div-centerer {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+//class
+.menu-login-footer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
+.father-box{
+  margin: 5% 20% auto 20%;
+}
+.login-button{
+  margin: auto 30% auto 30%;
+}
+.title{
+  text-align: center;
+}
+//media
+@media (min-width: 720px) {
+  .father-box{
+    margin: 5% 30% auto 30%;
+  }
+}
