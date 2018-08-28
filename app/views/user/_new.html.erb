@@ -1,0 +1,13 @@
+<%= form_for @user, url: {controller: "user", action: "create"}, :method => :post do |f| %>
+  <p><%= f.label :email %>
+  <%= f.text_field :email, class: 'form-control' %></p>
+
+  <p><%= f.label :password  %>
+  <%= f.password_field :password, class: 'form-control' %></p>
+
+  <p><%= f.label :password_confirmation  %>
+  <%= f.password_field :password_confirmation, class: 'form-control' %></p>
+
+  <p><%= f.submit "Create user" %></p>
+<% end %>
+<%= link_to "Back", admin_index_path, :class => 'btn btn-danger btn btn-primary btn-back text-center' %>
