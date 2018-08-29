@@ -35,6 +35,20 @@ class UserController < ApplicationController
     end
   end
 
+  def destroy
+    @user_delete = User.find(params[:id])
+    @user_delete.destroy
+
+    respond_to do |format|
+      if @user_delete.destroy
+        format.html { redirect_to admin_index_url, notice: 'Admin was successfully deleted.' }
+      else
+        format.html { redirect_to admin_index_url, notice: 'Admin wasnt successfully deleted.'}
+        format.json { render json: @user_delete.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   def user_params
     params.require(:user).permit(:username, :email, :password, :salt, :encrypted_password)
   end

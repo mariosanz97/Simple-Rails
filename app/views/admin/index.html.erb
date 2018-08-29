@@ -1,18 +1,18 @@
 <div class="body">
 
-  <div class="users">
-    <section class="section_show_table">
-      <%= render "/user/show" %>
-    </section>
-  </div>
-
   <div class="admins">
     <section class="section_show_table">
-      <%= render "show" %>
+      <%= render "/admin/show" %>
     </section>
 
     <section class="section_create_form">
-      <%= render "create" %>
+      <%= render "/admin/create" %>
+    </section>
+  </div>
+
+  <div class="users">
+    <section class="section_show_table">
+      <%= render "/user/show" %>
     </section>
   </div>
 
