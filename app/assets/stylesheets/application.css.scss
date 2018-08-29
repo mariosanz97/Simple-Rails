@@ -16,9 +16,15 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
- //Devise login form
- //mixin
- @mixin div-centerer {
+
+ body{
+  margin: auto;
+  max-width: 2000px;
+}
+
+//Devise login form
+//mixin
+@mixin div-centerer {
   margin: auto;
   width: 50%;
   border: 3px solid green;
@@ -26,11 +32,13 @@
 }
 //class
 .menu-login-footer{
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
   padding: 1rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #efefef;
+  color: black;
   text-align: center;
 }
 .father-box{

@@ -1,3 +1,120 @@
 // Place all the styles related to the user controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the admin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+//Font Famili
+$font-stack: Helvetica, sans-serif;
+$roboto-slab: 'Roboto Slab', serif;
+$open-sans: 'Open Sans', sans-serif;
+//Fonts size
+$font-size-smll: 1rem;
+$font-size-med: 2rem;
+$font-size-big: 3rem;
+//Selection gallery
+$width-button-gallery: 115px;
+$margin-top-gallery: 1.5em;
+
+//mixin
+@mixin centerer {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+//Selection
+.section_gallery{
+  margin-top: $margin-top-gallery;
+  margin-left: auto;
+  margin-right: auto;
+  width: $width-button-gallery;
+}
+
+//Table
+.table--button{
+  text-align: left;
+}
+
+.table--header-row{
+  text-align: center;
+  vertical-align: middle;
+  font-size: $font-size-med;
+  font-family: $open-sans;
+}
+
+.table--box{
+  margin: 2% 20% auto 20%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table--h1{
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+}
+
+//form
+.fakeButtonContainer {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.fakeButton {
+  text-align: center;
+  font-weight: 600;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.expander {
+  display: none;
+  padding: 1em;
+}
+
+input[type="text"], input[type="password"], input[type="submit"] {
+  font-size: 1em;
+  padding: .5em;
+  width: 100%;
+  display: block;
+}
+input[type="text"], input[type="password"] {
+  margin-bottom: 1em;
+}
+input[type="submit"] {
+  border: none;
+  background-color: #000000;
+  color: white;
+  padding: 1em;
+  font-size: .8em;
+  text-transform: uppercase;
+}
+input[type="submit"]:hover {
+  background-color: #212121;
+}
+//Edit form
+.edit-form-father{
+  margin: 5% 20% auto 20%;
+}
+.title{
+  text-align: center;
+}
+//media
+@media (min-width: 720px) {
+  .edit-form-father{
+    margin: 5% 30% auto 30%;
+  }
+}
+.btn-back{
+  margin: 1% auto;
+}

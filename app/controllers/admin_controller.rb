@@ -2,6 +2,7 @@ class AdminController < ApplicationController
 
   def index
     @admin_show = Admin.all
+    @user_show = User.all
     @admin_create = Admin.new
   end
 

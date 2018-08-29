@@ -1,4 +1,4 @@
-<%= form_for @user, url: {controller: "user", action: "create"}, :method => :post do |f| %>
+<%= form_for @user_create, url: {controller: "user", action: "create"}, :method => :post do |f| %>
   <p><%= f.label :email %>
   <%= f.text_field :email, class: 'form-control' %></p>
 

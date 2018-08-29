@@ -1,24 +1,24 @@
 <div class="table--box">
-    <h1 class="table--h1">Lista de Admins</h1>
-    <table class="table">
-        <thead class="thead-dark table-header">
-            <tr>
-                <th class="table--header-row" scope="col">User</th>
-                <th class="table--header-row" scope="col">Pass</th>
-                <th class="table--header-row" scope="col">Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% @admin_show.each do |admin| %>
-            <tr>
-                <td> <%= admin.user %> </td>
-                <td> <%= admin.password %> </td>
-                <td>
-                   <%= link_to "Update", edit_admin_path(admin), :class => "btn btn-warning btn btn-primary btn-sm table--button" %>
-                   <%= link_to "Delete", delete_admin_path(admin), :class => "btn btn-danger btn btn-primary btn-sm table--button"%>
-               </td>
-           </tr>
-           <% end %>
-       </tbody>
-   </table>
+  <h1 class="table--h1">Lista de Admins</h1>
+  <table class="table">
+    <thead class="thead-dark table-header">
+      <tr>
+        <th class="table--header-row" scope="col">User</th>
+        <th class="table--header-row" scope="col">Pass</th>
+        <th class="table--header-row" scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @admin_show.each do |admin| %>
+      <tr>
+        <td> <%= admin.user %> </td>
+        <td> <%= admin.password %> </td>
+        <td>
+         <%= link_to "Update", edit_admin_path(admin), :class => "btn btn-warning btn btn-primary btn-sm table--button" %>
+         <%= link_to "Delete", delete_admin_path(admin), :class => "btn btn-danger btn btn-primary btn-sm table--button"%>
+       </td>
+     </tr>
+     <% end %>
+   </tbody>
+ </table>
 </div>

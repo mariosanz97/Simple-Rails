@@ -1,17 +1,33 @@
 class UserController < ApplicationController
 
   def index
-    @user = User.new
+    @user_create = User.new
   end
 
   def new
-    @user = User.new
+  end
+
+  def edit
+    @user_edit = User.find(params[:id])
+  end
+
+  def update
+    @user_update = User.find(params[:id])
+
+    respond_to do |format|
+      if @user_update.update(user_params)
+        format.html { redirect_to admin_index_url, notice: 'Admin was successfully updated.' }
+      else
+        format.html { redirect_to admin_index_url, notice: 'Admin wasnt successfully updated.'}
+        format.json { render json: @user_update.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def create
-    @user = User.new(user_params)
+    @user_create = User.new(user_params)
 
-    if @user.save
+    if @user_create.save
       flash[:notice] = "Successfully created User." 
       redirect_to admin_index_path
     else

@@ -1,8 +1,8 @@
 <div class="edit-form-father">
   <h1 class="title">Edit</h1>
-  <%= form_for @admin_edit, url: {controller: "admin", action: "update"}, :method => :patch do |f| %>
-  <%= f.text_field :user, :placeholder => 'User' %>
-  <%= f.text_field :password, :placeholder => 'Password'%>
+  <%= form_for @user_edit, url: {controller: "user", action: "update"}, :method => :patch do |f| %>
+  <%= f.text_field :email, :placeholder => 'Email' %>
+  <%= f.text_field :encrypted_password, :placeholder => 'Encripted Password'%>
   <%= f.submit 'Update', :class => 'btn btn-warning btn btn-primary' %>
   <% end %>
   <%= link_to "Back", admin_index_path, :class => 'btn btn-danger btn btn-primary btn-back text-center' %>

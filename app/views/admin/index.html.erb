@@ -1,15 +1,25 @@
 <div class="body">
 
+  <div class="users">
     <section class="section_show_table">
-        <%= render "show" %>
+      <%= render "/user/show" %>
+    </section>
+  </div>
+
+  <div class="admins">
+    <section class="section_show_table">
+      <%= render "show" %>
     </section>
 
     <section class="section_create_form">
-        <%= render "create" %>
+      <%= render "create" %>
     </section>
+  </div>
 
+  <div class="gallery">
     <section class="section_gallery">
-        <%= link_to 'Go Image gallery', gallery_path, :class => "btn btn-danger" %>
+      <%= link_to 'Go Image gallery', gallery_path, :class => "btn btn-danger" %>
     </section>
+  </div>
 
 </div>

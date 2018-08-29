@@ -1,0 +1,24 @@
+<div class="table--box">
+    <h1 class="table--h1">Lista de Users</h1>
+    <table class="table">
+        <thead class="thead-dark table-header">
+            <tr>
+                <th class="table--header-row" scope="col">User</th>
+                <th class="table--header-row" scope="col">Pass</th>
+                <th class="table--header-row" scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @user_show.each do |user| %>
+            <tr>
+                <td> <%= user.email %> </td>
+                <td> user pass </td>
+                <td>
+                   <%= link_to "Update", edit_user_path(user), :class => "btn btn-warning btn btn-primary btn-sm table--button" %>
+                   <%= link_to "Delete", delete_user_path(user), :class => "btn btn-danger btn btn-primary btn-sm table--button"%>
+               </td>
+           </tr>
+           <% end %>
+       </tbody>
+   </table>
+</div>
