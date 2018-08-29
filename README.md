@@ -12,6 +12,7 @@ Tasks
     * [x] Learn to use databse (sql), migrations, schema..
     * [x] Learn to use Environment Variables.
     * [ ] Learn to do test.
+    * [x] Use gem devise.
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
