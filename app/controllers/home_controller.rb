@@ -1,6 +1,9 @@
 class HomeController < ApplicationController
+
   def index
-  
+    @admin_show = Admin.all
+    @admin_create = Admin.new
+    @user_show = User.all
   end
 
   def show

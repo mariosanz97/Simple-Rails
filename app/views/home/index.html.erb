@@ -2,19 +2,20 @@
 
   <div class="home-admins">
     <section class="section_show_table">
-      <%= render "/admin/index" %>
+      <%= render template: "/admin/index" %>
     </section>
-
-    <div class="home-users">
-      <section class="section_show_table">
-        <%= render "/user/index" %>
-      </section>
-    </div>
-
-    <div class="gallery">
-      <section class="section_gallery">
-        <%= link_to 'Go Image gallery', gallery_path, :class => "btn btn-danger" %>
-      </section>
-    </div>
-
   </div>
+
+  <div class="home-users">
+    <section class="section_show_table">
+      <%= render "/user/show" %>
+    </section>
+  </div>
+
+  <div class="gallery">
+    <section class="section_gallery">
+      <%= link_to 'Go Image gallery', gallery_path, :class => "btn btn-danger" %>
+    </section>
+  </div>
+
+</div>

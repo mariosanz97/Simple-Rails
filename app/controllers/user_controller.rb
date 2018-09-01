@@ -1,10 +1,11 @@
 class UserController < ApplicationController
 
   def index
-    @user_create = User.new
+    @user_show = User.all
   end
 
   def new
+    @user_create = User.new
   end
 
   def edit
@@ -16,9 +17,9 @@ class UserController < ApplicationController
 
     respond_to do |format|
       if @user_update.update(user_params)
-        format.html { redirect_to admin_index_url, notice: 'Admin was successfully updated.' }
+        format.html { redirect_to home_path, notice: 'Admin was successfully updated.' }
       else
-        format.html { redirect_to admin_index_url, notice: 'Admin wasnt successfully updated.'}
+        format.html { redirect_to home_path, notice: 'Admin wasnt successfully updated.'}
         format.json { render json: @user_update.errors, status: :unprocessable_entity }
       end
     end
@@ -29,9 +30,9 @@ class UserController < ApplicationController
 
     if @user_create.save
       flash[:notice] = "Successfully created User." 
-      redirect_to admin_index_path
+      redirect_to home_path
     else
-      redirect_to admin_index_path
+      redirect_to home_path
     end
   end
 
@@ -41,9 +42,9 @@ class UserController < ApplicationController
 
     respond_to do |format|
       if @user_delete.destroy
-        format.html { redirect_to admin_index_url, notice: 'Admin was successfully deleted.' }
+        format.html { redirect_to home_path, notice: 'Admin was successfully deleted.' }
       else
-        format.html { redirect_to admin_index_url, notice: 'Admin wasnt successfully deleted.'}
+        format.html { redirect_to home_path, notice: 'Admin wasnt successfully deleted.'}
         format.json { render json: @user_delete.errors, status: :unprocessable_entity }
       end
     end

@@ -2,7 +2,6 @@ class AdminController < ApplicationController
 
   def index
     @admin_show = Admin.all
-    @user_show = User.all
     @admin_create = Admin.new
   end
 
@@ -10,6 +9,7 @@ class AdminController < ApplicationController
   end
 
   def new
+    @admin_create = Admin.new
   end
 
   def create
@@ -17,9 +17,9 @@ class AdminController < ApplicationController
 
     respond_to do |format|
       if @admin_create.save
-        format.html { redirect_to admin_index_url, notice: 'Admin was successfully created.' }
+        format.html { redirect_to home_path, notice: 'Admin was successfully created.' }
       else
-        format.html { redirect_to admin_index_url, notice: 'Admin wasnt successfully created.'}
+        format.html { redirect_to home_path, notice: 'Admin wasnt successfully created.'}
         format.json { render json: @admin_create.errors, status: :unprocessable_entity }
       end
     end
@@ -34,9 +34,9 @@ class AdminController < ApplicationController
 
     respond_to do |format|
       if @admin_update.update(admin_params)
-        format.html { redirect_to admin_index_url, notice: 'Admin was successfully updated.' }
+        format.html { redirect_to home_path, notice: 'Admin was successfully updated.' }
       else
-        format.html { redirect_to admin_index_url, notice: 'Admin wasnt successfully updated.'}
+        format.html { redirect_to home_path, notice: 'Admin wasnt successfully updated.'}
         format.json { render json: @admin_update.errors, status: :unprocessable_entity }
       end
     end
@@ -48,9 +48,9 @@ class AdminController < ApplicationController
 
     respond_to do |format|
       if @admin_delete.destroy
-        format.html { redirect_to admin_index_url, notice: 'Admin was successfully deleted.' }
+        format.html { redirect_to home_path, notice: 'Admin was successfully deleted.' }
       else
-        format.html { redirect_to admin_index_url, notice: 'Admin wasnt successfully deleted.'}
+        format.html { redirect_to home_path, notice: 'Admin wasnt successfully deleted.'}
         format.json { render json: @admin_delete.errors, status: :unprocessable_entity }
       end
     end

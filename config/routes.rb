@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   #root 'home#index', as: 'home'
-  root 'admin#index', as: 'admin_index'
+  root 'home#index', as: 'home'
 
 #HOME
   get 'home/index'
@@ -13,7 +13,8 @@ Rails.application.routes.draw do
 
 #USER
   #Create new user-login (already logged in)
-  get 'user/index', to: 'user#index', as: 'user_cre'
+  get 'user/index', to: 'user#index', as: 'user_index'
+  get 'user/new', to: 'user#new', as: 'user_create'
   get 'user/:id/edit', to: 'user#edit', as: 'edit_user'
   get 'user/:id/destroy', to: 'user#destroy', as: 'delete_user'
   post 'user/create', to: 'user#create'
@@ -32,14 +33,13 @@ Rails.application.routes.draw do
   }
 
 #ADMIN
-#get 'admin/index', to: 'admin#index', as: 'admin_index'
+  #get 'admin/index', to: 'admin#index', as: 'admin_index'
   get 'admin/:id/edit', to: 'admin#edit', as: 'edit_admin'
   get 'admin/:id/destroy', to: 'admin#destroy', as: 'delete_admin'
-  #create post
   post 'admin', to: 'admin#create'
-  #edit patch
   patch 'admin/:id', to: 'admin#update'
-  #gallery
+
+#GALLERY
   get 'gallery/index', to: 'gallery#index', as: 'gallery'
 
 end
